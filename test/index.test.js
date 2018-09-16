@@ -1,14 +1,12 @@
-import * as path from 'path'
-import pluginTester from 'babel-plugin-tester'
-import macrosPlugin from 'babel-plugin-macros'
-import {
-  addAlias
-} from 'module-alias'
+import * as path from "path";
+import pluginTester from "babel-plugin-tester";
+import macrosPlugin from "babel-plugin-macros";
+import { addAlias } from "module-alias";
 
-addAlias('data-uri.macro', path.join(__dirname, '..'))
+addAlias("encoding-finite-characters.macro", path.join(__dirname, ".."));
 
 pluginTester({
-  title: 'data-uri.macro',
+  title: "encoding-finite-characters.macro",
   plugin: macrosPlugin,
   fixtures: `${__dirname}/fixtures`
-})
+});

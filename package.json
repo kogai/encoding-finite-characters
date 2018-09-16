@@ -4,8 +4,9 @@
   "description": "",
   "main": "dist",
   "scripts": {
+    "format": "prettier src/** test/** --write",
     "build": "babel src -d dist",
-    "test": "jest"
+    "test": "npm run build && jest"
   },
   "keywords": [],
   "repository": {
@@ -18,6 +19,7 @@
     "@babel/cli": "7.0.0",
     "@babel/core": "7.0.1",
     "@babel/preset-env": "7.0.0",
+    "babel-core": "7.0.0-bridge.0",
     "babel-plugin-macros": "2.4.0",
     "babel-plugin-tester": "5.5.1",
     "encoding-japanese": "1.0.29",
