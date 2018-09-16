@@ -6,15 +6,21 @@
   "scripts": {
     "format": "prettier src/** test/** --write",
     "build": "babel src -d dist",
-    "test": "npm run build && jest"
+    "build:watch": "babel --watch src/* --out-dir dist",
+    "test": "npm run build && jest",
+    "test:watch": "jest --watch"
   },
-  "keywords": [],
+  "keywords": [
+    "encoding",
+    "shift-jis",
+    "utf-8"
+  ],
   "repository": {
     "type": "git",
     "url": "git@github.com:kogai/encoding-finite-characters.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Shinichi Kogai",
+  "license": "MIT",
   "devDependencies": {
     "@babel/cli": "7.0.0",
     "@babel/core": "7.0.1",
