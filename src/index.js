@@ -1,8 +1,5 @@
 // @flow
 const {
-  pipe
-} = require("ramda");
-const {
   createMacro,
   MacroError
 } = require("babel-plugin-macros");

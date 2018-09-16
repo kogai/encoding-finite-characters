@@ -1,17 +1,28 @@
 {
-  "name": "encoding-finite-characters",
-  "version": "1.0.0",
+  "name": "encoding-finite-characters.macro",
+  "version": "0.0.1",
   "description": "",
-  "main": "index.js",
+  "main": "dist",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "babel src -d dist",
+    "test": "jest"
   },
   "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:kogai/encoding-finite-characters.git"
+  },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babel/cli": "7.0.0",
+    "@babel/core": "7.0.1",
+    "@babel/preset-env": "7.0.0",
     "babel-plugin-macros": "2.4.0",
+    "babel-plugin-tester": "5.5.1",
     "encoding-japanese": "1.0.29",
+    "jest": "23.6.0",
+    "module-alias": "2.1.0",
     "prettier": "1.14.2"
   }
 }
