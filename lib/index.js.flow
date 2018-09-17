@@ -1,12 +1,12 @@
 //@flow
 
 declare module "encoding-finite-characters.macro" {
-  declare type Params = {|
+  declare export type EncodingParams = {|
     characters: string,
     from: string,
     to: string
   |};
   declare export function createEncodingTable(
-    params: Params
+    params: EncodingParams
   ): { [string]: number[] };
 }

@@ -3,12 +3,14 @@
   "version": "0.0.1",
   "description": "",
   "main": "lib",
+  "types": "types/index.d.ts",
   "scripts": {
     "format": "prettier src/** test/** --write",
     "build": "babel src -d lib",
     "build:watch": "babel --watch src/* --out-dir lib",
-    "test": "npm run build && jest && npm run test:flow",
+    "test": "npm run build && jest && npm run test:flow && npm run test:ts",
     "test:flow": "flow test/flow.js",
+    "test:ts": "dtslint types",
     "test:watch": "jest --watch"
   },
   "keywords": [
@@ -28,12 +30,12 @@
     "@babel/preset-env": "7.0.0",
     "babel-core": "7.0.0-bridge.0",
     "babel-plugin-tester": "5.5.1",
+    "dtslint": "0.3.0",
     "flow-bin": "0.81.0",
     "jest": "23.6.0",
     "module-alias": "2.1.0",
     "prettier": "1.14.2",
-    "renovate": "13.69.4",
-    "typescript": "3.0.3"
+    "renovate": "13.69.4"
   },
   "dependencies": {
     "babel-plugin-macros": "2.4.0",
