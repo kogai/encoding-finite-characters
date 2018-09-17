@@ -2,11 +2,11 @@
   "name": "encoding-finite-characters.macro",
   "version": "0.0.1",
   "description": "",
-  "main": "dist",
+  "main": "lib",
   "scripts": {
     "format": "prettier src/** test/** --write",
-    "build": "babel src -d dist",
-    "build:watch": "babel --watch src/* --out-dir dist",
+    "build": "babel src -d lib",
+    "build:watch": "babel --watch src/* --out-dir lib",
     "test": "npm run build && jest",
     "test:watch": "jest --watch"
   },

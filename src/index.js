@@ -1,6 +1,5 @@
-// @flow
-const { createMacro, MacroError } = require("babel-plugin-macros");
-const { convert } = require("encoding-japanese");
+import { createMacro, MacroError } from "babel-plugin-macros";
+import { convert } from "encoding-japanese";
 
 function macro({ references, babel: { types } }) {
   references.default.forEach(
@@ -40,6 +39,8 @@ function macro({ references, babel: { types } }) {
           `encoding-finite-characters.macro expect arguments to be able to evaluate statically.`
         );
       }
+      if (args.type && args.type.confident && args.type.value === "flow") {
+      }
       const properties = [...new Set(args.characters.value.split(""))].map(
         x => {
           const encoded = convert([x.charCodeAt(0)], {
@@ -58,4 +59,4 @@ function macro({ references, babel: { types } }) {
   );
 }
 
-module.exports = createMacro(macro);
+export const createEncodingTable = createMacro(macro);
