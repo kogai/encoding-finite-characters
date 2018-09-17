@@ -59,4 +59,4 @@ function macro({ references, babel: { types } }) {
   );
 }
 
-export const createEncodingTable = createMacro(macro);
+export default createMacro(macro);

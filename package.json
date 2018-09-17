@@ -8,9 +8,10 @@
     "format": "prettier src/** test/** --write",
     "build": "babel src -d lib",
     "build:watch": "babel --watch src/* --out-dir lib",
-    "test": "npm run build && jest && npm run test:flow && npm run test:ts",
+    "test": "npm run test:unit && npm run test:flow && npm run test:ts",
     "test:flow": "flow test/flow.js",
     "test:ts": "dtslint types",
+    "test:unit": "npm run build && jest",
     "test:watch": "jest --watch"
   },
   "keywords": [

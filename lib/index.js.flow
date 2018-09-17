@@ -6,7 +6,10 @@ declare module "encoding-finite-characters.macro" {
     from: string,
     to: string
   |};
-  declare export function createEncodingTable(
+
+  declare function createEncodingTable(
     params: EncodingParams
   ): { [string]: number[] };
+
+  declare export default typeof createEncodingTable;
 }

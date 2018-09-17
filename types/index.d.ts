@@ -4,6 +4,8 @@ export interface EncodingParams {
   to: string;
 }
 
-export function createEncodingTable(
+declare function createEncodingTable(
   params: EncodingParams
 ): { [key: string]: number[] };
+
+export default createEncodingTable;
