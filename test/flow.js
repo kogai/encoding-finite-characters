@@ -1,3 +1,4 @@
+// @flow
 import createEncodingTable from "encoding-finite-characters.macro";
 
 const converter = createEncodingTable({
@@ -5,3 +6,8 @@ const converter = createEncodingTable({
   from: "UNICODE",
   to: "SJIS"
 });
+
+(converter: { [string]: number[] });
+
+// $ExpectError
+(converter[""]: boolean);

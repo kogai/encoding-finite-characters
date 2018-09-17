@@ -2,12 +2,17 @@
   "name": "encoding-finite-characters.macro",
   "version": "0.0.1",
   "description": "",
-  "main": "dist",
+  "main": "lib",
+  "types": "types/index.d.ts",
   "scripts": {
     "format": "prettier src/** test/** --write",
-    "build": "babel src -d dist",
-    "build:watch": "babel --watch src/* --out-dir dist",
-    "test": "npm run build && jest",
+    "build": "babel src -d lib",
+    "build:watch": "babel --watch src/* --out-dir lib",
+    "test": "npm run test:unit && npm run test:flow:ci && npm run test:ts",
+    "test:flow": "flow test/flow.js",
+    "test:flow:ci": "/usr/bin/flow test/flow.js",
+    "test:ts": "dtslint types",
+    "test:unit": "npm run build && jest",
     "test:watch": "jest --watch"
   },
   "keywords": [
@@ -26,12 +31,16 @@
     "@babel/core": "7.0.1",
     "@babel/preset-env": "7.0.0",
     "babel-core": "7.0.0-bridge.0",
-    "babel-plugin-macros": "2.4.0",
     "babel-plugin-tester": "5.5.1",
-    "encoding-japanese": "1.0.29",
+    "dtslint": "0.3.0",
+    "flow-bin": "0.78.0",
     "jest": "23.6.0",
     "module-alias": "2.1.0",
     "prettier": "1.14.2",
     "renovate": "13.69.4"
+  },
+  "dependencies": {
+    "babel-plugin-macros": "2.4.0",
+    "encoding-japanese": "1.0.29"
   }
 }
