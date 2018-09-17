@@ -15,6 +15,7 @@ references:
       name: Install libraries
       command: |
         apk --update --no-cache add git build-base ca-certificates
+        apk add --no-cache --repository https://nl.alpinelinux.org/alpine/edge/testing flow
   install_node_modules: &install_node_modules
     run:
       name: Install dependencies
