@@ -26,12 +26,14 @@
     "@babel/core": "7.0.1",
     "@babel/preset-env": "7.0.0",
     "babel-core": "7.0.0-bridge.0",
-    "babel-plugin-macros": "2.4.0",
     "babel-plugin-tester": "5.5.1",
-    "encoding-japanese": "1.0.29",
     "jest": "23.6.0",
     "module-alias": "2.1.0",
     "prettier": "1.14.2",
     "renovate": "13.69.4"
+  },
+  "dependencies": {
+    "babel-plugin-macros": "2.4.0",
+    "encoding-japanese": "1.0.29"
   }
 }
